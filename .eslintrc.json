@@ -1,0 +1,34 @@
+{
+    "plugins": ["prettier", "import",  "@typescript-eslint"],
+    "extends": [
+        "plugin:prettier/recommended",
+        "prettier",
+        "airbnb-base",
+        "airbnb-typescript/base",
+//        "plugin:@typescript-eslint/recommendend", /* prettier/@typescript-eslintбыл удален в eslint-config-prettierv8.0.0. Единственная запись, extendsнеобходимая сейчас для того, чтобы Prettier и ESLint не конфликтовали "prettier" */
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "root": true,
+    "rules": {
+        "no-debugger": "off",
+        "no-console": 0,
+        "class-methods-use-this": "off",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-iferrable-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "max-lines-per-function": ["error", 40],
+        "@typescript-eslint/no-non-null-assertion": "error"
+    }
+}
